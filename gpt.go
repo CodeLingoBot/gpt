@@ -217,7 +217,7 @@ func (this Partition) Name() string {
 ////////////////// TABLE /////////////////////
 //////////////////////////////////////////////
 
-// Read GPT partition
+// ReadTable reads GPT partition
 // Have to set to first byte of GPT Header (usually start of second sector on disk)
 func ReadTable(reader io.ReadSeeker, SectorSize uint64) (table Table, err error) {
 	table.SectorSize = SectorSize
